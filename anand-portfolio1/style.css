@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.scene {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  animation: 5s shake ease-in-out infinite;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
+}
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.95;
+  border: 2px solid #fff;
+  backface-visibility: hidden;
+}
+/* Colors and positions */
+.front  { background: linear-gradient(125deg,skyblue,yellow); transform: rotateY(0deg) translateZ(100px); }
+.back   { background: linear-gradient(125deg,skyblue,yellow); transform: rotateY(180deg) translateZ(100px); }
+.right  { background: linear-gradient(125deg,skyblue,yellow); transform: rotateY(90deg) translateZ(100px); }
+.left   { background: linear-gradient(125deg,skyblue,yellow); transform: rotateY(-90deg) translateZ(100px); }
+.top    { background: linear-gradient(125deg,skyblue,yellow); transform: rotateX(90deg) translateZ(100px); }
+.bottom { background: linear-gradient(125deg,skyblue,yellow); transform: rotateX(-90deg) translateZ(100px); }
+
+.about-name h1, .skill-section h1, .certification-section h1, .project h1, .service h1, .contact-details h1{
+  color: dodgerblue;
+  text-decoration: underline wavy black;
+}
+.header-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+}
+.header-section a{
+    font-size: 30px;
+    padding: 25px;
+    text-decoration: none;
+    color: white !important;
+}
+.header-section a:hover{
+    transform: scale(1.3);
+}
+.name-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px !important;
+}
+.name-h1{
+    color: black !important;
+    text-shadow: 10px 10px 10px 30px black !important;
+    font-size: 50px !important;
+}
+.name-h1 span{
+    color: orange;
+    font-size: 50px;
+    font-family: cursive;
+}
+.name-h2{
+    color: black;
+    padding-top: 10px !important;
+}
+.social-interaction{
+    padding: 20px !important;
+    animation: float 5s ease-in-out infinite;
+    padding-top: 5px !important;
+}
+.social-interaction img{
+    width: 80px;
+    height: 85px;
+}
+.about-section{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.about-section img{
+    width: 400px;
+    height: 350px;
+    padding-left: 30px;
+    padding-top: 50px;
+    z-index: 5;
+    animation: scale 5s ease-in-out infinite;
+    border-radius: 20px !important;
+}
+.about-name{
+    display: flex !important;
+    padding-left: 10%;
+    padding-top: 5px;
+    flex-direction: column;
+    flex-wrap: wrap !important;
+    min-width: 1000px;
+}
+
+.about-name p{
+    font-size: 30px;
+}
+.button{
+    color: black;
+    padding-left: 10px !important;
+    margin-left: 100px !important;
+    display: flex;
+    flex-direction: column;
+    width: 250px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+}
+.button a{
+    color: white !important;
+    font-size: 20px;
+    padding: 2px;
+    text-decoration: none;
+}
+.button:hover{
+    animation: shake 5s ease-in-out;
+}
+.skill-section{
+    margin-top: 40px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill{
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap !important;
+    gap: 60px !important;
+    margin-top: 60px !important;
+}
+
+.skill div {
+  flex-basis: calc(33.33% - 120px);
+}
+
+.skill img{
+   width: 250px !important;
+   height: 300px !important;
+}
+.skill img:hover{
+   transform: scale(1.3);
+}
+.certification-section{
+   display: flex !important;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px !important;
+}
+.certificate1{
+   display: flex !important;
+   flex-direction: column !important;
+   width: 28% !important;
+   height: 250px !important;
+   border: 2px solid black;
+   padding: 22px !important;
+   border-radius: 20px;
+   text-justify: inter-cluster !important;
+   margin-top: 10px;
+}
+.certificate1 p{
+   font-size: 20px;
+   font-weight: bold;
+}
+.project{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 35px;
+}
+.project1{
+   display: flex;
+   flex-direction: column;
+   border: 2px solid black;
+   box-shadow: 0 0 10px 5px black;
+   width: 700px;
+   border-top-left-radius: 50px;
+   margin-top: 10px;
+}
+.project1 img{
+   border-top-left-radius: 50px;
+   padding: 2px;
+}
+.project1 p{
+   padding: 10px;
+   font-weight: bold;
+}
+.service{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px !important;
+}
+.according-header{
+   text-align: center !important;
+}
+.service-button{
+   background-color: black !important;
+   color: white !important;
+   display: flex !important;
+   justify-content: space-between !important;
+   align-items: center !important;
+   margin-top: 30px;
+   width: 1000px;
+   border-top-right-radius: 20px !important;
+   border-bottom-left-radius: 20px !important;
+   border-style: groove !important;
+}
+.contact-section {
+  display: flex;
+  gap: 30px;
+  margin: 30px !important;
+  border: 2px solid black;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+}
+
+.contact-section h1 {
+  text-align: center;
+}
+
+.contact-details {
+  flex-grow: 1;
+  display: flex !important;
+  flex-direction: column;
+}
+.contact-details img{
+  width: 70px;
+  height: 90px;
+  margin-top: 0;
+}
+
+.phone-section{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   margin-top: 20px;
+}
+.phone-section strong{
+   font-size: 30px;
+   padding-top: 20px;
+}
+footer{
+   width: 100%;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: grey;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes float1 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes scale {
+   from{
+     transform: scale(1.0);
+   } 
+   to{
+    transform: scale(0.95);
+   }
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateY(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateY(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateY(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(180deg) rotateY(0deg); }
+  50%  { transform: rotateX(180deg) rotateY(180deg); }
+  75%  { transform: rotateX(0deg) rotateY(180deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(180deg) rotateY(0deg); }
+  50%  { transform: rotateX(180deg) rotateY(180deg); }
+  75%  { transform: rotateX(0deg) rotateY(180deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
